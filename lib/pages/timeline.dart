@@ -15,14 +15,14 @@ class _TimelineState extends State<Timeline> {
 
   @override
   void initState() {
-    getUsers();
+    //getUsers();
     //createUser();
-    updateUser();
+    //updateUser();
     //deleteUser();
     super.initState();
   }
 
-  createUser() async {
+  /*createUser() async {
     await usersRef.add({
       "username": "Jeff",
       "postsCount": 0,
@@ -31,9 +31,9 @@ class _TimelineState extends State<Timeline> {
   }
 
   updateUser() async {
-    /*await usersRef
+    */ /*await usersRef
         .document("-M8P8Wz8UWAkodczonxV")
-        .updateData({"postsCount": 1});*/
+        .updateData({"postsCount": 1});*/ /*
 
     final doc = await usersRef.document("-M8P8Wz8UWAkodczonxV").get();
 
@@ -56,11 +56,11 @@ class _TimelineState extends State<Timeline> {
     setState(() {
       users = snapshot.documents;
     });
-    /*snapshot.documents.forEach((DocumentSnapshot doc) {
+    */ /*snapshot.documents.forEach((DocumentSnapshot doc) {
 
 
-    });*/
-  }
+    });*/ /*
+  }*/
 
   @override
   Widget build(context) {
