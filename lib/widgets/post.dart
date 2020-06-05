@@ -11,8 +11,6 @@ import 'package:fluttershare/pages/home.dart';
 import 'package:fluttershare/widgets/custom_image.dart';
 import 'package:fluttershare/widgets/progress.dart';
 
-final usersRef = Firestore.instance.collection('users');
-
 class Post extends StatefulWidget {
   final String postId;
   final String ownerId;
