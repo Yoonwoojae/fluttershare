@@ -272,8 +272,8 @@ class _PostState extends State<Post> {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return Comments(
         postId: postId,
-        ownerId: ownerId,
-        mediaUrl: mediaUrl,
+        postOwnerId: ownerId,
+        postMediaUrl: mediaUrl,
       );
     }));
   }
