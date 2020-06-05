@@ -67,6 +67,20 @@ class CommentsState extends State<Comments> {
       "avatarUrl": currentUser.photoUrl,
       "userId": currentUser.id,
     });
+    bool isNotPostOwner = postOwnerId != currentUser.id;
+    if (isNotPostOwner) {
+      activityFeedRef.document(postId).collection('feedItems').add({
+        "type": "comment",
+        "commentData": commentController.text,
+        "username": currentUser.username,
+        "userId": currentUser.id,
+        "userProfileImg": currentUser.photoUrl,
+        "postId": postId,
+        "mediaUrl": postMediaUrl,
+        "timestamp": timestamp,
+      });
+    }
+
     commentController.clear();
     // 키패드 닫기
     FocusScopeNode currentFocus = FocusScope.of(context);
