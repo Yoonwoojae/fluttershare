@@ -116,6 +116,7 @@ class _ProfileState extends State<Profile> {
     if (isProfileOwner) {
       return buildButton(text: "Edit Profile", function: editProfile);
     }
+    return Text('button');
   }
 
   buildProfileHeader() {
